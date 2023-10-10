@@ -122,9 +122,8 @@ main{
     gap: 0.5rem;
 }
 
-/* *************************** MAIN ***************************** */
-
 .main__headline {
+    padding: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline;
     font-size: 1.3rem;
@@ -202,4 +201,86 @@ main{
     font-size: 0.7rem;
     letter-spacing: 0.1rem;
     margin-top: -0.4rem;
+}
+
+/* *****************************mediaqueries****************************** */
+
+@media screen and (min-width: 1440px) {
+
+    /* *****header fixes******* */
+
+    .header__list{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .header__list a{
+        font-size: 1rem;
+    }
+
+    /* ******section 1 fixes****** */
+
+    .section-1 img{
+        object-fit: cover;
+        height: 57rem;
+    }
+
+    .section-1__article{
+        top: 40%;
+        left: 60%;
+        background-color: rgba(0, 0, 0, 0.281);
+    }
+
+    .section-1__headline{
+        font-size: 3rem;
+    }
+
+    .section-1__text{
+        font-size: 1rem;
+        padding: 2rem;
+    }
+
+    .section-1__button{
+        padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    /* *********main fixes********* */
+
+    
+    .main__article1{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .main__article2{
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .main__article3{
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .main__article4{
+        grid-column: 5 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .main__text{
+        padding-top: 1rem;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgba(0, 0, 0, 0.61);
+        font-size: 0.9rem;
+    }
+
+    /* ***********section-2************** */
+
+    .section-2__headline{
+        /* grid-column: auto / span 6;
+        grid-row: auto / span 1; */
+    }
+    
+    .section-2__imagepositioner{
+        display: flex;
+    }
 }
