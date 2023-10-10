@@ -274,11 +274,6 @@ main{
     }
 
     /* ***********section-2************** */
-
-    .section-2__headline{
-        /* grid-column: auto / span 6;
-        grid-row: auto / span 1; */
-    }
     
     .section-2__imagepositioner{
         display: flex;
