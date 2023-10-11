@@ -29,6 +29,64 @@
             </div>
         </section>
 
+        <form class="form">
+            <h3 class="form__headline">Search rooms</h3>
+            <fieldset class="form__roomtype">
+                <label for="Room-type">Room type</label>
+                <select name="rooms" id="selectrooms">
+                    <option value="All">All</option>
+                    <option value="Bungalow">Bungalow</option>
+                    <option value="Superior">Superior</option>
+                    <option value="Tara-suite">Tara-suite</option>
+                </select>
+            </fieldset>
+            <fieldset class="form__guests">
+                <label for="guests">Guests</label>
+                <select name="guestnumber" id="guestnumbers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="pricerange">Room price : 600$</label>
+                <input type="range" name="pricerange" id="price" min="400" max="600">
+            </fieldset>
+            <fieldset>
+                <label for="roomsize">Room Size</label>
+                <input type="text" name="roomsize" id="roomsize" placeholder="0">
+                <input type="text" name="roomsize" id="roomsize" placeholder="4">
+            </fieldset>
+            <fieldset>
+                <input type="checkbox" name="breakfast" id="breakfast">
+                <label for="breakfast">Breakfast</label>
+                <input type="checkbox" name="Pets" id="Pets">
+                <label for="Pets">Pets</label>
+            </fieldset>
+        </form>
+
+        <section class="section-2">
+            <h3 class="section-2__headline">Featured Rooms</h3>
+            <div class="section-2__imagepositioner">
+                <figure class="section-2__item">
+                    <img src="./assets/rooms/bungalow.jpg" alt="bungalowimage">
+                    <figcaption class="section-2__imgtext">Bungalow</figcaption>
+                    <figcaption class="section-2__prize">$400 <br><span>per night</span></figcaption>
+                </figure>
+                <figure class="section-2__item">
+                    <img src="./assets/rooms/superior.jpg" alt="superiorimage">
+                    <figcaption class="section-2__imgtext">Superior</figcaption>
+                    <figcaption class="section-2__prize">$500 <br><span>per night</span></figcaption>
+                </figure>
+                <figure class="section-2__item">
+                    <img src="./assets/rooms/tara-suite.jpg" alt="Tara-suiteimage">
+                    <figcaption class="section-2__imgtext">Tara-suite</figcaption>
+                    <figcaption class="section-2__prize">$600 <br><span>per night</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
     </div>
 </body>
 </html>
