@@ -24,6 +24,11 @@ header{
     align-items: center;
     padding: 1rem;
     background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+
 }    
 
 .header__backgroundimg{
