@@ -10,12 +10,15 @@ body{
 }
 
 .wrapper{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
 }
 /* ***********************************header************************************* */
 
 header{
+    grid-column: auto / span 6;
+    grid-row: auto / span 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -57,15 +60,12 @@ header{
 /* ***************************section 1*************************** */
 
 .section-1{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: auto;
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 4;
 }
 
 .section-1__griditem{
     position: relative;
-    grid-column: auto / span 6;
-    grid-row: auto / span 4;
 }
 .section-1 img{
     width: 100%;
@@ -73,7 +73,7 @@ header{
 
 .section-1__article{
     top: 45%;
-    left: 19%;
+    left: 20%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.137);
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -81,6 +81,20 @@ header{
     flex-direction: column;
     align-items: center;
 }
+/* ********positionfix for textbox in ABOUT.HTML******** */
+
+.section-1__fix{
+    top: 45%;
+    left: 15%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.137);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* *************************** section 1 *************************** */
 
 .section-1__headline{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -114,6 +128,8 @@ header{
 /* ********************************main******************************* */
 
 main{
+    grid-column: 1 / span 6;
+    grid-row: 6 / span 1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: auto;
@@ -162,15 +178,11 @@ main{
 /* ********************************section 2************************* */
 
 .section-2{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: auto;
+    grid-column: 1 / span 6;
     padding: 0.5rem;
 }
 
 .section-2__headline{
-    grid-column: auto / span 6;
-    grid-row: auto / span 1;
     text-align: center;
     padding: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -178,8 +190,6 @@ main{
 }
 
 .section-2__imagepositioner{
-    grid-column: auto / span 6;
-    grid-row: auto / span 3;
     gap: 0.5rem;
 }
 
@@ -206,8 +216,9 @@ main{
 
 .section-2__prize{
     position: absolute;
-    top: 1%;
-    padding: 0.4rem;
+    top: 0%;
+    left: 0%;
+    padding: 0.6rem;
     background-color: rgba(0, 0, 0, 0.486);
     color: white;
     text-align: center;
@@ -219,6 +230,40 @@ main{
     font-size: 0.6rem;
     letter-spacing: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ************************forms on about page*********************************** */
+.form{
+    grid-column: 1 / span 6;
+    grid-row: 6 / span 1;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    gap: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.form__headline{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1rem;
+}
+
+.form__fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.form__roomsize input{
+    width: 15%;
 }
 
 /* *****************************mediaqueries****************************** */
@@ -295,5 +340,46 @@ main{
     
     .section-2__imagepositioner{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
+    .section-2__item{
+        width: 20rem;
+    }
+
+    .section-2__item img{
+        width: 100%;
+    }
+
+    /* **********forms********* */
+
+    .form__container{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 5rem 5rem 5rem;
+        justify-content: center;
+        gap: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+    }
+    
+    .form__headline{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        padding: 3rem;
+    }
+    
+    .form__fields{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        gap: 0.3rem;
+    }
+    
+    .form__roomsize input{
+        width: 4rem;
+    }
+    
 }
