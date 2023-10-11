@@ -73,7 +73,7 @@ header{
 
 .section-1__article{
     top: 45%;
-    left: 15%;
+    left: 19%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.137);
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -188,12 +188,13 @@ main{
     -webkit-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
     margin: 0.5rem;
+    position: relative;
 }
 
 .section-2__item img{
     width: 100%;
 }
-.section-2__item figcaption{
+.section-2__imgtext{
     text-align: center;
     padding: 0.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -201,6 +202,23 @@ main{
     font-size: 0.7rem;
     letter-spacing: 0.1rem;
     margin-top: -0.4rem;
+}
+
+.section-2__prize{
+    position: absolute;
+    top: 1%;
+    padding: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.486);
+    color: white;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-2__prize span{
+    font-size: 0.6rem;
+    letter-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* *****************************mediaqueries****************************** */
