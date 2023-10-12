@@ -80,26 +80,12 @@ header{
     top: 45%;
     left: 20%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.137);
+    background-color: rgba(0, 0, 0, 0.281);
     padding: 0.5rem 1rem 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/* ********positionfix for textbox in ABOUT.HTML******** */
-
-.section-1__fix{
-    top: 45%;
-    left: 15%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.137);
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* *************************** section 1 *************************** */
 
 .section-1__headline{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -130,9 +116,35 @@ header{
     background-color: rgb(28, 134, 2);
 }
 
+/* ********positionfix for section-1__article in booking.html******** */
+
+.section-1__bookinghtmlfix{
+    top: 45%;
+    left: 15%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* *******positionfix for textbox in rooms.html********** */
+
+.section-1__roomshtmlfix{
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* ********************************main******************************* */
 
-main{
+.main__homepage{
     grid-column: 1 / span 6;
     grid-row: 6 / span 1;
     display: grid;
@@ -184,6 +196,7 @@ main{
 
 .section-2{
     grid-column: 1 / span 6;
+    grid-row: 7 / span 1;
     padding: 0.5rem;
 }
 
@@ -208,7 +221,9 @@ main{
 
 .section-2__item img{
     width: 100%;
+    
 }
+
 .section-2__imgtext{
     text-align: center;
     padding: 0.4rem;
@@ -237,7 +252,49 @@ main{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.section-2__item--imgfix{
+    box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0);
+    margin: 0.5rem;
+    position: relative;
+}
+
+.section-2__item img{
+    width: 100%;
+    
+}
+
+/* ***********************roomsection on rooms.html****************** */
+
+.roomsection{
+    grid-column: 1 / span 6;
+    grid-row: 6 / span 1;
+    padding: 0.5rem;
+}
+
+.roomsection__headline{
+    text-align: center;
+    padding: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+}
+
+.roomsection__imagepositioner{
+    gap: 0.5rem;
+}
+
+.roomsection__item--imgfix{
+    margin: 0.5rem;
+}
+
+.roomsection__item img{
+    width: 100%;
+    
+}
+
 /* ************************forms on about page*********************************** */
+
 .form{
     grid-column: 1 / span 6;
     grid-row: 6 / span 1;
@@ -271,6 +328,17 @@ main{
     width: 15%;
 }
 
+/* **************************styles for rooms.html******************* */
+
+.main__rooms{
+    grid-column: 1 / span 6;
+    grid-row: 7 / span 1;
+}
+
+.aside{
+    grid-column: 1 / span 6;
+}
+
 /* *****************************mediaqueries****************************** */
 
 @media screen and (min-width: 1440px) {
@@ -296,6 +364,12 @@ main{
     .section-1__article{
         top: 40%;
         left: 60%;
+        background-color: rgba(0, 0, 0, 0.281);
+    }
+
+    /* section 1 fix again */
+
+    .section-1__fix{
         background-color: rgba(0, 0, 0, 0.281);
     }
 
@@ -357,6 +431,37 @@ main{
         width: 100%;
     }
 
+    .section-2__item--imagecover img{
+        height: 100%;
+    }
+
+    /* **********roomsection in room html----- */
+
+    .roomsection{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .roomsection__imagepositioner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .roomsection__item{
+        width: 20rem;
+    }
+
+    .roomsection__item img{
+        width: 100%;
+    }
+
+    .roomsection__imagepositioner{
+        gap: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
     /* **********forms********* */
 
     .form__container{
