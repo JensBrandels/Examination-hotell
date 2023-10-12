@@ -217,6 +217,7 @@ header{
     -moz-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
     margin: 0.5rem;
     position: relative;
+    margin-bottom: 1.6rem;
 }
 
 .section-2__item img{
@@ -330,14 +331,65 @@ header{
 
 /* **************************styles for rooms.html******************* */
 
-.main__rooms{
+.mainrooms{
     grid-column: 1 / span 6;
     grid-row: 7 / span 1;
+    padding: 1rem;
+}
+
+.mainrooms__rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mainrooms__roominfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainrooms__roomheadline{
+    padding-top: 1rem;
+    border-bottom: 1px black solid;
+}
+
+.mainrooms__maininfo{
+    margin-top: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.452);
+    text-align: center;
+}
+
+.mainrooms__text{
+    margin-top: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.452);
+}
+
+.mainrooms__text span{
+    color: black;
 }
 
 .aside{
     grid-column: 1 / span 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.aside__positioner2{
+    padding: 1rem;
+}
+
+.aside__text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.452);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
 
 /* *****************************mediaqueries****************************** */
 
@@ -358,7 +410,7 @@ header{
 
     .section-1 img{
         object-fit: cover;
-        height: 57rem;
+        height: 53rem;
     }
 
     .section-1__article{
@@ -435,32 +487,6 @@ header{
         height: 100%;
     }
 
-    /* **********roomsection in room html----- */
-
-    .roomsection{
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .roomsection__imagepositioner{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .roomsection__item{
-        width: 20rem;
-    }
-
-    .roomsection__item img{
-        width: 100%;
-    }
-
-    .roomsection__imagepositioner{
-        gap: 0.5rem;
-        display: flex;
-        flex-wrap: nowrap;
-    }
     
     /* **********forms********* */
 
@@ -490,6 +516,97 @@ header{
     
     .form__roomsize input{
         width: 4rem;
+    }
+
+/* **********room html****************/
+
+    .roomsection{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .roomsection__imagepositioner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .roomsection__item{
+        width: 30rem;
+    }
+
+    .roomsection__item img{
+        width: 100%;
+    }
+
+    .roomsection__imagepositioner{
+        gap: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+/* *******************mainroom infosection desktop******** */
+    .mainrooms{
+        grid-column: 2 / span 4;
+        grid-row: 7 / span 1;
+        padding: 1rem;
+    }
+    
+    .mainrooms__rooms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .mainrooms__roominfo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .mainrooms__roomheadline{
+        padding-top: 2rem;
+        border-bottom: 1px black solid;
+    }
+    
+    .mainrooms__maininfo{
+        margin-top: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgba(0, 0, 0, 0.452);
+        text-align: left;
+        width: 70%;
+    }
+    
+    .mainrooms__text{
+        margin-top: 0.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgba(0, 0, 0, 0.452);
+    }
+    
+    .mainrooms__text span{
+        color: black;
+    }
+
+    .aside{
+        grid-column: 5 / span 6;
+        grid-row: 7 / span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-left: 0.5px rgba(0, 0, 0, 0.205) solid;
+        margin-bottom: 1rem;
+        width: 60%;
+    }
+    
+    .aside__positioner2{
+        padding: 0.4rem;
+    }
+    
+    .aside__text{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgba(0, 0, 0, 0.452);
+        font-size: 0.8rem;
+        line-height: 3.2rem;
     }
     
 }
